@@ -31,7 +31,7 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 
-    <!-- 1. Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav id="navbar" class="bg-white shadow-md sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -51,7 +51,7 @@
                     <a href="experiential.html" class="text-gray-900 border-b-2 border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Experiential Learning</a>
                 </div>
                 
-                <!-- Mobile Menu Button (Hamburger) -->
+                <!-- Mobile Menu Button -->
                 <div class="-mr-2 flex items-center sm:hidden">
                     <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-900" aria-controls="mobile-menu" aria-expanded="false">
                         <!-- Menu closed icon (bars) -->
@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
+        <!-- Mobile Menu -->
         <div class="sm:hidden" id="mobile-menu" style="display: none;">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="index.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
@@ -80,7 +80,7 @@
         </div>
     </nav>
 
-    <!-- 2. Main Experiential Content -->
+    <!-- Main Content -->
     <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
         
         <header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
@@ -88,73 +88,63 @@
             <p class="text-lg text-slate-600 mt-2">Hobbies, Self-directed Learning, and Past Work</p>
         </header>
 
-        <!-- Section 1: Volunteer and Organization Involvement -->
-        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Self-study and Skills Practice</h2>
-            
-            <p class="text-gray-700 leading-relaxed mb-6">
-                These activities demonstrate my commitment to teamwork, leadership development, and applying my technical knowledge in a non-academic, community context.
-            </p>
-
-            <div class="space-y-6">
-                <!-- Activity 1: Student Organization Involvement -->
-                <div class="relative pl-6">
-                    <span class="absolute left-0 top-1 h-3 w-3 rounded-full bg-slate-500"></span>
-                    <h3 class="text-xl font-semibold text-gray-900">Information Systems Student Council | <span class="text-slate-600 font-normal">Technical Support Volunteer</span></h3>
-                    <p class="text-sm text-gray-600 mt-1">September 2023 – Present</p>
-                    <ul class="list-disc list-outside ml-4 mt-2 text-sm text-gray-700 space-y-1">
-                        <li>Provided essential A/V and network support for major college events, ensuring zero downtime for virtual and hybrid setups.</li>
-                        <li>Assisted in maintaining the departmental website (using Google Sites and custom HTML snippets), contributing to content updates and accessibility improvements.</li>
-                        <li>**Learning:** Gained practical experience in immediate, low-latency technical troubleshooting under pressure.</li>
-                    </ul>
-                </div>
-                
-                <!-- Activity 2: Community Outreach/Volunteer Work -->
-                <div class="relative pl-6">
-                    <span class="absolute left-0 top-1 h-3 w-3 rounded-full bg-slate-500"></span>
-                    <h3 class="text-xl font-semibold text-gray-900">Local Youth Tech Initiative | <span class="text-slate-600 font-normal">Workshop Assistant</span></h3>
-                    <p class="text-sm text-gray-600 mt-1">Summer 2024</p>
-                    <ul class="list-disc list-outside ml-4 mt-2 text-sm text-gray-700 space-y-1">
-                        <li>Assisted in running weekend workshops focused on basic coding (Python loops and variables) for high school students.</li>
-                        <li>Prepared training materials and helped debug participant code errors in real-time.</li>
-                        <li>**Learning:** Strengthened communication skills by translating complex technical concepts into accessible language for a beginner audience.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: Field Trips and Applied Learning Events -->
+        <!-- Section 1: Solo Projects and Hobbies -->
         <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Solo Development Projects and Hobbies</h2>
             
             <p class="text-gray-700 leading-relaxed mb-6">
-                Field studies provide contextual knowledge, connecting theoretical curriculum to industry practices and operational environments.
+                These activities demonstrate the application of my technical knowledge in a non-academic, community-driven context.
             </p>
 
             <div class="space-y-6">
-                <!-- Event 1: Industry Visit/Field Trip -->
-                <div class="relative pl-6">
-                    <span class="absolute left-0 top-1 h-3 w-3 rounded-full bg-slate-500"></span>
-                    <h3 class="text-xl font-semibold text-gray-900">FinTech Innovation Center Tour</h3>
-                    <p class="text-sm text-gray-600 mt-1">Date: October 2024</p>
-                    <ul class="list-disc list-outside ml-4 mt-2 text-sm text-gray-700 space-y-1">
-                        <li>**Focus:** Attended a guided tour focusing on the security architecture and cloud infrastructure supporting high-volume financial transactions.</li>
-                        <li>**Key Takeaway:** Observed the practical deployment of redundant servers and learned how DevOps teams manage security patches without service interruption, reinforcing concepts from the Web Application Security course.</li>
-                    </ul>
-                    <a href="assets/images/fintech-tour-photo.jpg" target="_blank" class="mt-3 inline-block text-sm text-blue-600 hover:text-blue-800 underline">
-                        View Photo/Evidence (Optional)
-                    </a>
+                <!-- Activity 1: ROMdle Helper -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900">ROMdle Helper | <span class="text-slate-600 font-normal">Python and Data Handling</span></h3>
+                    <p class="text-gray-600 mt-1">
+                        To support the <em>Ragnarok Mobile</em> gaming community, I built a dedicated "Wordle-solver" web application using Python and Flask. 
+                        Recognizing that the game's daily puzzles rely on niche vocabulary, I created a database of game lore (monsters, items, and NPCs) and implemented search logic that helps users narrow down the correct word based on their current guesses and constraints.
+                    </p>
                 </div>
                 
-                <!-- Event 2: Workshop/Seminar -->
-                <div class="relative pl-6">
-                    <span class="absolute left-0 top-1 h-3 w-3 rounded-full bg-slate-500"></span>
-                    <h3 class="text-xl font-semibold text-gray-900">Git and CI/CD Workshop</h3>
-                    <p class="text-sm text-gray-600 mt-1">Date: November 2024</p>
-                    <ul class="list-disc list-outside ml-4 mt-2 text-sm text-gray-700 space-y-1">
-                        <li>**Focus:** Intensive half-day workshop on advanced Git strategies (rebasing, cherry-picking) and setting up basic Continuous Integration/Continuous Deployment pipelines.</li>
-                        <li>**Key Takeaway:** Directly applied new knowledge to team projects by formalizing the merging process using pull requests and branch protection, greatly improving collaborative stability.</li>
-                    </ul>
+                <!-- Activity 2: Patched WiFi Linux Driver -->
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-gray-900">Linux Kernel Driver Patch (RTL8852AU) | <span class="text-slate-600 font-normal">System Administration and Open Source</span></h3>
+                    <p class="text-gray-600 mt-1 mb-2">
+                        I engineered a patch for the Realtek RTL8852AU Wi-Fi driver to resolve compatibility issues with Ubuntu 24.04 LTS and the newer Linux Kernel 6.11. 
+                        The project involved updating the driver's C codebase to align with modern kernel APIs. 
+                        This contribution successfully restored Wi-Fi 6 connectivity for devices like the <em>TP-Link AX1800</em> on more recent Linux distribution versions.
+                    </p>
+                    <a href="https://github.com/josejuico/rtl8852au-6.11-patched" target="_blank" class="text-blue-900 hover:text-blue-800 underline">GitHub Repository Link</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Self-study -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Self-study and Skills Practice</h2>
+            
+            <p class="text-gray-700 leading-relaxed mb-6">
+                To stay ahead of industry trends, I dedicate time to self-directed study and online courses. 
+                This habit allows me to adopt new programming languages and tools that are not covered in my program's curriculum.
+            </p>
+
+            <div class="space-y-6">
+                <!-- Activity 1: W3Schools Python Courses -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900">Python Programming Proficiency | <span class="text-slate-600 font-normal">W3Schools Coursework</span></h3>
+                    <p class="text-gray-600 mt-1">
+                        I completed the core Python curriculum on W3Schools to establish a formalized and comprehensive understanding of the language. 
+                        This training focused on mastering fundamental data structures, file handling, backend logic implementation, and object-oriented programming (OOP) principles.
+                    </p>
+                </div>
+                
+                <!-- Activity 2: Google AI Boost Bites -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900">Generative AI Concepts and Application | <span class="text-slate-600 font-normal">Google AI Boost Bites</span></h3>
+                    <p class="text-gray-600 mt-1">
+                        I engaged in the Google AI Boost Bites learning program to quickly acquire practical knowledge in contemporary AI technology. 
+                        The training covered key areas such as the application of generative AI models, effective prompt engineering techniques, and the ethical considerations necessary for responsibly integrating AI into modern software development workflows.
+                    </p>
                 </div>
             </div>
         </section>
