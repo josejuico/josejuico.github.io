@@ -12,15 +12,29 @@
             font-family: 'Inter', sans-serif;
             background-color: #f7fafc; 
         }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 20px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate-fadeInUp {
+            opacity: 0;
+            animation: fadeInUp 0.7s ease-out forwards;
+            animation-delay: 0.2s;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 
-    <!-- 1. Navigation Bar (Standardized) -->
+    <!-- Navigation Bar -->
     <nav id="navbar" class="bg-white shadow-md sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <!-- Logo / Name -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="text-2xl font-extrabold text-slate-700 tracking-tight">
                         Jose Juico
@@ -37,17 +51,23 @@
                     <a href="experiential.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Experiential Learning</a>
                 </div>
                 
-                <!-- Mobile Menu Button (Hamburger) -->
+                <!-- Mobile Menu -->
                 <div class="-mr-2 flex items-center sm:hidden">
-                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500" aria-controls="mobile-menu" aria-expanded="false">
-                        <svg class="block h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                        <svg class="hidden h-6 w-6" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-900" aria-controls="mobile-menu" aria-expanded="false">
+                        <!-- Menu closed icon (bars) -->
+                        <svg class="block h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Menu open icon (x) -->
+                        <svg class="hidden h-6 w-6" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
+        <!-- Mobile Menu -->
         <div class="sm:hidden" id="mobile-menu" style="display: none;">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="index.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
@@ -61,7 +81,7 @@
     </nav>
 
     <!-- 2. Main Internship Content -->
-    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
         
         <header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
             <h1 class="text-4xl font-extrabold text-slate-700 tracking-tight">Internship Learning Documentation</h1>
@@ -179,14 +199,14 @@
         </section>
     </main>
 
-    <!-- Footer (Standardized) -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-12">
         <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-sm">
             &copy; 2025 Jose Juico
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Toggle (Standardized) -->
+    <!-- JavaScript for Mobile Menu Toggle -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const button = document.getElementById('mobile-menu-button');
