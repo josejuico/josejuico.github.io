@@ -88,105 +88,256 @@
             <p class="text-lg text-gray-600 mt-2">Capstone Projects, Software Development Work, and Technical Papers</p>
         </header>
 
-        <!-- Project 1: MetroMetrics - Web-Based Transit Analytics Platform -->
+        <!-- Project 1: Research Paper -->
         <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">MetroMetrics - Web-Based Transit Analytics Platform</h2>
-            <p class="text-sm text-gray-500 mb-4">Group Capstone/Major Project | Advanced Data Analytics Course</p>
+            <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">Assessing the Impact of Real-time Crowding Information on Metro Manila's Train Lines</h2>
+            <p class="text-sm text-gray-500 mb-4">Co-Author | Quantitative and Qualitative Research | Pre-Capstone Study</p>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Image/Media Column -->
-                <div class="lg:col-span-1">
-                    <a href="assets/images/metrometrics-dashboard-full.png" target="_blank" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                         <!-- Placeholder Image -->
-                        <img src="https://placehold.co/600x400/374151/FFFFFF?text=MetroMetrics+Dashboard" alt="Screenshot of MetroMetrics Dashboard" class="w-full h-auto">
+                 <div class="lg:col-span-1">
+                    <a href="assets/docs/isrsrch_group3.pdf" target="_blank" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                         <img src="assets/images/isrsrch_cover.png" alt="Research Paper Cover Page" class="w-full h-auto">
                     </a>
                 </div>
 
-                <!-- Description/Details Column -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h3 class="text-xl font-semibold text-slate-700">Project Overview</h3>
+                    <p class="text-gray-600">
+                        <strong>Research Problem</strong>: Metro Manila's train lines (LRT-1, LRT-2, MRT-3) suffer from severe overcrowding. 
+                        This study investigated whether access to Real-Time Crowding Information (RTCI) would actually influence commuters to adjust their travel behavior.
+                    </p>
+                    <p class="text-gray-600">
+                        <strong>Methodology</strong>: The team utilized a Descriptive-Correlational design with a mixed-methods approach. 
+                        We surveyed 252 respondents and performed statistical treatment (Linear and Logistic Regression) using <em>Jamovi</em> and <em>Excel</em> to analyze the correlation between waiting times, crowding frequency, and commuter comfort.
+                    </p>
+                    <p class="text-gray-600">
+                        <strong>Key Outcome</strong>: The study revealed that while awareness of RTCI alone is insufficient, there is a statistically significant link between waiting times and user discomfort. 
+                        These findings served as the foundational basis for the MetroMetrics Capstone Project, validating the need for a predictive analytics tool.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-slate-700 mt-4">Technical Skills and Links</h3>
+                    <ul class="list-disc list-outside ml-6 text-sm text-gray-600 space-y-1">
+                        <li><strong>Data Analysis</strong>: Jamovi (Statistical Software), Microsoft Excel</li>
+                        <li><strong>Methodologies</strong>: Chi-square Testing, Spearman's rho, Thematic Analysis</li>
+                        <li><strong>Soft Skills</strong>: Technical Writing, Data Interpretation, Survey Design</li>
+                        <li><a href="assets/docs/isrsrch_group3.pdf" target="_blank" class="text-blue-900 hover:text-blue-800 underline">Read Full Research Paper (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project 2: MetroMetrics - Web-Based Transit Analytics Platform -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">MetroMetrics - Web-Based Transit Analytics Platform</h2>
+            <p class="text-sm text-gray-500 mb-4">Capstone Project | Machine Learning and Data Analytics</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <div class="lg:col-span-1 relative">
+                    <div class="w-full h-80 min-h-[300px] bg-slate-100 border border-slate-300 rounded-lg relative overflow-hidden group">
+
+                        <div class="carousel-slide-p2 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-100 z-10 flex flex-col justify-center">
+                            <a href="assets/images/metrometrics_homepage.png" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/metrometrics_homepage.png" 
+                                    alt="Screenshot of MetroMetrics Homepage" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">Homepage Interface</p>
+                        </div>
+
+                        <div class="carousel-slide-p2 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-0 z-0 flex flex-col justify-center">
+                            <a href="assets/images/metrometrics_basic_dashboard.png" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/metrometrics_basic_dashboard.png" 
+                                    alt="Screenshot of MetroMetrics Basic Dashboard" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">Basic Dashboard</p>
+                        </div>
+
+                        <div class="carousel-slide-p2 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-0 z-0 flex flex-col justify-center">
+                            <a href="assets/images/metrometrics_advanced_dashboard.png" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/metrometrics_advanced_dashboard.png" 
+                                    alt="Screenshot of MetroMetrics Advanced Dashboard" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">Advanced Dashboard</p>
+                        </div>
+
+                        <button id="prevSlideP2" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-blue-900 p-2 rounded-full shadow-md z-20 transition-colors focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                        <button id="nextSlideP2" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-blue-900 p-2 rounded-full shadow-md z-20 transition-colors focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="lg:col-span-2 space-y-4">
                     <h3 class="text-xl font-semibold text-slate-700">Project Overview</h3>
                     <p class="text-gray-600">
                         <strong>Problem</strong>: Transit authorities lacked real-time or predictive data on train passenger crowding, leading to operational inefficiencies during peak hours and a degraded passenger experience.
                     </p>
                     <p class="text-gray-600">
-                        <strong>Solution/My Role</strong>: As Lead Developer, I spearheaded the integration of the backend ML model (XGBoost) with the Django web framework. The final platform provides predictive hourly crowding forecasts and embeds interactive Google Looker dashboards for visualization.
+                        <strong>My Role</strong>: As Lead Developer, I spearheaded the integration of the backend Machine Learning model (XGBoost) with the Django web framework. The final platform provides predictive hourly crowding forecasts and embeds interactive Google Looker dashboards for visualization.
                     </p>
 
-                    <h3 class="text-xl font-semibold text-slate-700 mt-4">Technical Stack & Links</h3>
+                    <h3 class="text-xl font-semibold text-slate-700 mt-4">Technical Stack</h3>
                     <ul class="list-disc list-outside ml-6 text-sm text-gray-600 space-y-1">
                         <li><strong>Backend</strong>: Python (Django), XGBoost (Machine Learning), MySQL</li>
                         <li><strong>Frontend/Visualization</strong>: HTML/CSS, Embedded Google Looker Studio</li>
-                        <li><a href="[LINK_TO_LIVE_DEMO]" target="_blank" class="text-blue-900 hover:text-blue-800 underline">View Live Demo / Video Walkthrough</a></li>
-                        <li><a href="[LINK_TO_GITHUB_REPO]" target="_blank" class="text-blue-900 hover:text-blue-800 underline">View GitHub Repository</a></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Project 2: ROMdle Helper - Flask Web App -->
+        <!-- Project 3: Smart Trash Can with Touch-Free Lid Operation and Waste Level Indicator Using Arduino -->
         <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">ROMdle Helper - Flask Web App</h2>
-            <p class="text-sm text-gray-500 mb-4">Individual Project | Backend Web Development Course</p>
+            <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">Smart Trash Can with Touch-Free Lid and Waste Level Indicator</h2>
+            <p class="text-sm text-gray-500 mb-4">Final Project | Embedded Systems (Arduino) | Hardware Prototyping</p>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                 <!-- Image/Media Column -->
-                 <div class="lg:col-span-1">
-                    <a href="assets/images/romdle-helper-full.png" target="_blank" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                         <!-- Placeholder Image -->
-                        <img src="https://placehold.co/600x400/4B5563/FFFFFF?text=ROMdle+Helper+App" alt="Screenshot of ROMdle Helper Interface" class="w-full h-auto">
-                    </a>
+                 
+                 <div class="lg:col-span-1 relative">
+                    <div class="w-full h-80 min-h-[300px] bg-slate-100 border border-slate-300 rounded-lg relative overflow-hidden group">
+
+                        <div class="carousel-slide-p3 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-100 z-10 flex flex-col justify-center">
+                            <a href="assets/images/smart_tc_front.jpg" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/smart_tc_front.jpg" 
+                                    alt="Smart Trash Can in Operation" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">Trash Can in Operation</p>
+                        </div>
+                        
+                        <div class="carousel-slide-p3 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-0 z-0 flex flex-col justify-center">
+                            <a href="assets/images/smart_tc_concept.png" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/smart_tc_concept.png" 
+                                    alt="Smart Trash Can Concept 3D Model" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">3D Concept Model</p>
+                        </div>
+
+                        <div class="carousel-slide-p3 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-0 z-0 flex flex-col justify-center">
+                            <a href="assets/images/smart_tc_schem.png" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/smart_tc_schem.png" 
+                                    alt="Smart Trash Can Schematic Diagram" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">Circuit Schematic Diagram</p>
+                        </div>
+
+                        <button id="prevSlideP3" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-blue-900 p-2 rounded-full shadow-md z-20 transition-colors focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                        <button id="nextSlideP3" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-blue-900 p-2 rounded-full shadow-md z-20 transition-colors focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Description/Details Column -->
                 <div class="lg:col-span-2 space-y-4">
                     <h3 class="text-xl font-semibold text-slate-700">Project Overview</h3>
                     <p class="text-gray-600">
-                        <strong>Goal</strong>: Develop a clean, functional web application from scratch to demonstrate proficiency in Python backend routing, state management (server-side), and complex pattern-matching logic.
+                        <strong>Problem</strong>: In environments like healthcare facilities or public spaces, physical contact with trash bins poses sanitation risks. 
+                        Standard bins lack accessibility features for individuals with mobility issues and offer no visibility into fill levels, leading to inefficient waste management.
                     </p>
                     <p class="text-gray-600">
-                        <strong>Solution/My Role</strong>: Designed and built a word-based assistant tool capable of generating random words and supporting wildcard searches based on user-defined character patterns. The project showcased solo full-stack development.
+                        <strong>Solution</strong>: I designed and built a fully functional prototype using the Arduino ecosystem. 
+                        The system utilizes ultrasonic sensors to detect user proximity for touch-free lid operation (via servo motor) and continuously monitors internal waste volume. 
+                        Real-time status updates and fill-level bar graphs are rendered on an LCD screen.
                     </p>
 
-                    <h3 class="text-xl font-semibold text-slate-700 mt-4">Technical Stack & Links</h3>
+                    <h3 class="text-xl font-semibold text-slate-700 mt-4">Technical Stack and Hardware</h3>
                     <ul class="list-disc list-outside ml-6 text-sm text-gray-600 space-y-1">
-                        <li><strong>Backend</strong>: Python (Flask)</li>
-                        <li><strong>Logic</strong>: Custom pattern-matching algorithms, random generation.</li>
-                        <li><a href="[LINK_TO_LIVE_DEMO]" target="_blank" class="text-blue-900 hover:text-blue-800 underline">View Live Demo</a></li>
-                        <li><a href="[LINK_TO_GITHUB_REPO]" target="_blank" class="text-blue-900 hover:text-blue-800 underline">View GitHub Repository</a></li>
+                        <li><strong>Microcontroller</strong>: Arduino Uno R3</li>
+                        <li><strong>Sensors and Actuators</strong>: HC-SR04 and HY-SRF05 (Ultrasonic), SG90 Servo Motor</li>
+                        <li><strong>Software</strong>: C++ (Arduino IDE), NewPing Library, LiquidCrystal_I2C Library</li>
+                        <li><strong>Skills</strong>: Circuit Design, Schematic Interpretation, Hardware-Software Integration</li>
+                        <li><a href="assets/docs/embesys_final_project.pdf" target="_blank" class="text-blue-900 hover:text-blue-800 underline">Read Project Paper (PDF)</a></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Project 3: Barangay 756 Community Web Portal -->
+        <!-- Project 4: IoT-Based Pet Fan Control System Using PIR and Ultrasonic Sensors -->
         <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">Barangay 756 Community Web Portal</h2>
-            <p class="text-sm text-gray-500 mb-4">Group Community Project | Information Systems Strategy Course</p>
+            <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">IoT-Based Pet Fan Control System Using PIR and Ultrasonic Sensors</h2>
+            <p class="text-sm text-gray-500 mb-4">Final Project | IoT Development | ESP32 and Cloud Integration</p>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                 <!-- Image/Media Column -->
-                 <div class="lg:col-span-1">
-                    <a href="assets/images/barangay-portal-full.png" target="_blank" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                         <!-- Placeholder Image -->
-                        <img src="https://placehold.co/600x400/6B7280/FFFFFF?text=Community+Portal+Site" alt="Screenshot of Community Portal Home Page" class="w-full h-auto">
-                    </a>
+                 
+                 <div class="lg:col-span-1 relative">
+                    <div class="w-full h-80 min-h-[300px] bg-slate-100 border border-slate-300 rounded-lg relative overflow-hidden group">
+
+                        <div class="carousel-slide-p4 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-100 z-10 flex flex-col justify-center">
+                            <a href="assets/images/smart_fan_front.jpg" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/smart_fan_front.jpg" 
+                                    alt="Smart Fan Front Shot" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">Smart Fan Prototype</p>
+                        </div>
+
+                        <div class="carousel-slide-p4 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-0 z-0 flex flex-col justify-center">
+                            <a href="assets/images/smart_fan_diagram.png" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/smart_fan_diagram.png" 
+                                    alt="AirPro Circuit Wiring" 
+                                    class="object-contain w-full h-full rounded-md">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">3D Concept Model</p>
+                        </div>
+
+                        <div class="carousel-slide-p4 absolute inset-2 transition-opacity duration-500 ease-in-out opacity-0 z-0 flex flex-col justify-center">
+                            <a href="assets/images/smart_fan_schem.png" target="_blank" class="block w-full h-full">
+                                <img src="assets/images/smart_fan_schem.png" 
+                                    alt="AirPro High Level Diagram" 
+                                    class="object-contain w-full h-full rounded-md"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/64748b?text=System+Diagram';">
+                            </a>
+                            <p class="text-xs text-center text-gray-500 mt-1">Circuit Schematic Diagram</p>
+                        </div>
+
+                        <button id="prevSlideP4" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-blue-900 p-2 rounded-full shadow-md z-20 transition-colors focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                        <button id="nextSlideP4" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-blue-900 p-2 rounded-full shadow-md z-20 transition-colors focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Description/Details Column -->
                 <div class="lg:col-span-2 space-y-4">
                     <h3 class="text-xl font-semibold text-slate-700">Project Overview</h3>
                     <p class="text-gray-600">
-                        <strong>Problem</strong>: The local community required a central, accessible source of information for announcements, services, and regulatory forms, which was previously scattered and difficult to find.
+                        <strong>Problem</strong>: Traditional mechanical timers lack adaptability, often wasting energy by running fans when pets aren't present. 
+                        Outdoor pets in the Philippines require a cooling solution that is both responsive and energy-efficient.
                     </p>
                     <p class="text-gray-600">
-                        <strong>Solution/My Role</strong>: Collaborated with the team under the Agile-Scrum methodology. My focus was on Information Architecture and Accessible UI Design, specifically structuring the navigation and content layout using Google Sites to ensure easy use by all residents.
+                        <strong>Solution</strong>: I developed a smart fan system powered by an ESP32 microcontroller. 
+                        It utilizes a dual-sensor logic: a PIR sensor detects initial motion, while an Ultrasonic sensor verifies sustained proximity to ensure the fan only runs when the pet is actually present. 
+                        The system integrates with Firebase Realtime Database to allow remote control and timer configuration via a custom Android app.
                     </p>
 
-                    <h3 class="text-xl font-semibold text-slate-700 mt-4">Technical Stack & Links</h3>
+                    <h3 class="text-xl font-semibold text-slate-700 mt-4">Technical Stack and Hardware</h3>
                     <ul class="list-disc list-outside ml-6 text-sm text-gray-600 space-y-1">
-                        <li><strong>Tools</strong>: Google Sites, Figma (for mockups), UI/UX Design Principles</li>
-                        <li><strong>Methodology</strong>: Agile-Scrum Sprints, Product Owner Feedback loops</li>
-                        <li><a href="[LINK_TO_LIVE_SITE]" target="_blank" class="text-blue-900 hover:text-blue-900 underline">View Live Site / Design Documentation</a></li>
+                        <li><strong>Microcontroller</strong>: ESP32 (Wi-Fi enabled)</li>
+                        <li><strong>Cloud and Connectivity</strong>: Firebase Realtime Database (RTDB), Wi-Fi</li>
+                        <li><strong>Hardware</strong>: PIR Sensor (HC-SR501), Ultrasonic Sensor (HC-SR04), 5V Relay</li>
+                        <li><strong>Software</strong>: C++ (Arduino IDE), Android Application Development</li>
+                        <li><a href="assets/docs/iotdevt_final_project.pdf" target="_blank" class="text-blue-900 hover:text-blue-800 underline">Read Project Paper (PDF)</a></li>
                     </ul>
                 </div>
             </div>
@@ -196,11 +347,10 @@
         <section class="mt-12 p-6 bg-white rounded-xl shadow-lg">
             <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">Other Academic Documentation</h2>
             <p class="text-gray-600 mb-4">
-                In addition to the major projects above, I have completed several high-level reports and technical analyses demonstrating expertise in core Information Systems concepts:
+                In addition to the major projects above, I have completed reports and technical analyses demonstrating core Information Systems concepts:
             </p>
             <ul class="list-disc list-outside ml-6 text-gray-600 space-y-2">
-                <li><a href="assets/docs/Report-Database-Normalization.pdf" target="_blank" class="text-blue-900 hover:text-slate-900 font-medium underline">Database Normalization Case Study (PDF)</a></li>
-                <li><a href="assets/docs/Report-Network-Security-Analysis.pdf" target="_blank" class="text-blue-900 hover:text-slate-900 font-medium underline">Network Security Vulnerability Report (PDF)</a></li>
+                <li><a href="assets/docs/isquant_research.pdf" target="_blank" class="text-blue-900 hover:text-slate-900 font-medium underline">Learning Modalities in SMIT: Student Preferences for Face-to-Face, Online, Hybrid, or Blended (PDF)</a></li>
             </ul>
         </section>
 
@@ -239,6 +389,98 @@
                 });
             }
         });
+
+        // --- Project 2 (MetroMetrics) Carousel Logic ---
+        const slidesP2 = document.querySelectorAll('.carousel-slide-p2');
+        const prevBtnP2 = document.getElementById('prevSlideP2');
+        const nextBtnP2 = document.getElementById('nextSlideP2');
+        let currentSlideP2 = 0;
+
+        function showSlideP2(index) {
+            slidesP2.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('opacity-0', 'z-0');
+                    slide.classList.add('opacity-100', 'z-10');
+                } else {
+                    slide.classList.remove('opacity-100', 'z-10');
+                    slide.classList.add('opacity-0', 'z-0');
+                }
+            });
+        }
+
+        if(prevBtnP2 && nextBtnP2) {
+            prevBtnP2.addEventListener('click', () => {
+                currentSlideP2 = (currentSlideP2 === 0) ? slidesP2.length - 1 : currentSlideP2 - 1;
+                showSlideP2(currentSlideP2);
+            });
+
+            nextBtnP2.addEventListener('click', () => {
+                currentSlideP2 = (currentSlideP2 === slidesP2.length - 1) ? 0 : currentSlideP2 + 1;
+                showSlideP2(currentSlideP2);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Project 3 (Smart Trash Can) Carousel Logic ---
+            const slidesP3 = document.querySelectorAll('.carousel-slide-p3');
+            const prevBtnP3 = document.getElementById('prevSlideP3');
+            const nextBtnP3 = document.getElementById('nextSlideP3');
+            let currentSlideP3 = 0;
+
+            function showSlideP3(index) {
+                slidesP3.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('opacity-0', 'z-0');
+                        slide.classList.add('opacity-100', 'z-10');
+                    } else {
+                        slide.classList.remove('opacity-100', 'z-10');
+                        slide.classList.add('opacity-0', 'z-0');
+                    }
+                });
+            }
+
+            if(prevBtnP3 && nextBtnP3) {
+                prevBtnP3.addEventListener('click', () => {
+                    currentSlideP3 = (currentSlideP3 === 0) ? slidesP3.length - 1 : currentSlideP3 - 1;
+                    showSlideP3(currentSlideP3);
+                });
+
+                nextBtnP3.addEventListener('click', () => {
+                    currentSlideP3 = (currentSlideP3 === slidesP3.length - 1) ? 0 : currentSlideP3 + 1;
+                    showSlideP3(currentSlideP3);
+                });
+            }
+        });
+
+        // --- Project 4 (Smart Fan) Carousel Logic ---
+        const slidesP4 = document.querySelectorAll('.carousel-slide-p4');
+        const prevBtnP4 = document.getElementById('prevSlideP4');
+        const nextBtnP4 = document.getElementById('nextSlideP4');
+        let currentSlideP4 = 0;
+
+        function showSlideP4(index) {
+            slidesP4.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('opacity-0', 'z-0');
+                    slide.classList.add('opacity-100', 'z-10');
+                } else {
+                    slide.classList.remove('opacity-100', 'z-10');
+                    slide.classList.add('opacity-0', 'z-0');
+                }
+            });
+        }
+
+        if(prevBtnP4 && nextBtnP4) {
+            prevBtnP4.addEventListener('click', () => {
+                currentSlideP4 = (currentSlideP4 === 0) ? slidesP4.length - 1 : currentSlideP4 - 1;
+                showSlideP4(currentSlideP4);
+            });
+
+            nextBtnP4.addEventListener('click', () => {
+                currentSlideP4 = (currentSlideP4 === slidesP4.length - 1) ? 0 : currentSlideP4 + 1;
+                showSlideP4(currentSlideP4);
+            });
+        }
     </script>
 </body>
 </html>
