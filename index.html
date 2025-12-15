@@ -85,11 +85,10 @@
 
     <!--  Main Content Section -->
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fadeInUp">
-        <div class="flex flex-col lg:flex-row gap-12 items-start">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-10">
             
-            <!-- Left Column: Image and Professional Header -->
-            <div class="w-full lg:w-1/3 flex flex-col items-center lg:items-start space-y-6">
-                
+            <div class="lg:col-span-1 lg:order-1 flex flex-col items-center lg:items-start space-y-6">
                 <div class="w-48 h-48 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center shadow-xl border-4 border-white">
                     <img src="assets/images/josejuico_pfp.png" 
                          alt="Professional Headshot of Jose Juico" 
@@ -97,7 +96,6 @@
                          onerror="this.onerror=null; this.src='https://placehold.co/200x200/4F46E5/FFFFFF?text=Photo';">
                 </div>
 
-                <!-- Professional Header -->
                 <div class="text-center lg:text-left">
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-700 tracking-tight">
                         Jose Aurelio N. Juico
@@ -111,41 +109,79 @@
                 </div>
             </div>
 
-            <!-- Right Column: Introduction/Elevator Pitch & Contact Info -->
-            <div class="w-full lg:w-2/3 space-y-10">
+            <section class="lg:col-span-2 lg:order-2 p-6 bg-white rounded-xl shadow-lg border border-gray-100 h-full">
+                <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">About This Portfolio</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Welcome to my digital portfolio. This site serves to showcase my journey as an Information Systems student and an aspiring Software Engineer. 
+                    It features an electronic resume, documentation of my internship experience, and some of my best academic work.
+                </p>
+                <p class="mt-3 text-gray-600 leading-relaxed">
+                    My primary area of focus is on full-stack web development and data analytics, including predictive data from machine learning. 
+                    I'm actively seeking opportunities to apply my skills in building systems that deliver real-world value. 
+                    This portfolio reflects not just my technical capabilities, but also my commitment to continuous learning and professional growth in my chosen career.
+                </p>
+            </section>
 
-                <!-- Introduction/Elevator Pitch -->
-                <section class="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
-                    <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">About This Portfolio</h2>
-                    <p class="text-gray-600 leading-relaxed">
-                        Welcome to my digital portfolio. This site serves to showcase my journey as an Information Systems student and an aspiring Software Engineer. 
-                        It features an electronic resume, documentation of my internship experience, and some of my best academic work.
-                    </p>
-                    <p class="mt-3 text-gray-600 leading-relaxed">
-                        My primary area of focus is on full-stack web development and data analytics, including predictive data from machine learning. 
-                        I'm actively seeking opportunities to apply my skills in building systems that deliver real-world value. 
-                        This portfolio reflects not just my technical capabilities, but also my commitment to continuous learning and professional growth in my chosen career.
-                    </p>
-                </section>
-
-                <!-- Contact Information & External Links -->
-                <section class="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
-                    <h2 class="text-2xl font-bold text-slate-700 mb-4 border-b pb-2">Get In Touch</h2>
-                    <div class="space-y-4">
-                        <!-- Email Link -->
-                        <div class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><path d="M7 10l5 5 5-5"></path></svg>
-                            <a href="mailto:josejuico@gmail.com" class="text-lg text-gray-600 hover:text-gray-500 font-medium">josejuico@gmail.com</a>
-                        </div>
-                        
-                        <!-- LinkedIn Link -->
-                        <div class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                            <a href="https://linkedin.com/in/josejuico" target="_blank" class="text-lg text-gray-600 hover:text-gray-500 font-medium">LinkedIn Profile</a>
+            <section class="lg:col-span-2 lg:order-4 p-6 bg-white rounded-xl shadow-lg border border-gray-100 h-full">
+                <h2 class="text-2xl font-bold text-slate-700 mb-6 border-b pb-2">Key Technologies</h2>
+                
+                <div class="space-y-5">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-start gap-2">
+                        <h3 class="w-full sm:w-48 text-xs font-bold text-gray-400 uppercase tracking-widest pt-1.5 flex-shrink-0">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Python</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">JavaScript</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">C#</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">HTML & CSS</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">SQL</span>
                         </div>
                     </div>
-                </section>
-            </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-start gap-2">
+                        <h3 class="w-full sm:w-48 text-xs font-bold text-gray-400 uppercase tracking-widest pt-1.5 flex-shrink-0">Frameworks & Libraries</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Django</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Flask</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Pandas</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">NumPy</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-start gap-2">
+                        <h3 class="w-full sm:w-48 text-xs font-bold text-gray-400 uppercase tracking-widest pt-1.5 flex-shrink-0">Tools & Platforms</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Git</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Docker</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Linux</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Postman</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Looker Studio</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="lg:col-span-1 lg:order-3 w-full p-6 bg-white rounded-xl shadow-lg border border-gray-100 h-full">
+                <h2 class="text-xl font-bold text-slate-700 mb-4 border-b pb-2">Get In Touch</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><path d="M7 10l5 5 5-5"></path></svg>
+                        <a href="mailto:josejuico@gmail.com" class="text-base sm:text-lg text-gray-600 hover:text-gray-500 font-medium truncate">josejuico@gmail.com</a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://linkedin.com/in/josejuico" target="_blank" class="text-base sm:text-lg text-gray-600 hover:text-gray-500 font-medium">LinkedIn Profile</a>
+                    </div>
+
+                    <div class="flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <a href="https://github.com/josejuico" target="_blank" class="text-base sm:text-lg text-gray-600 hover:text-gray-500 font-medium">GitHub Profile</a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
