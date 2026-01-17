@@ -77,84 +77,38 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
+<main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
+    
+    <header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
+        <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Developer Playground</h1>
+        <p class="text-lg text-slate-600 mt-2">Side Projects and Software Experiments</p>
+    </header>
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 md:p-12 text-center">
+        <div class="flex justify-center mb-6">
+            <div class="p-4 bg-blue-50 rounded-full animate-pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                </svg>
+            </div>
+        </div>
         
-        <header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
-            <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Developer Playground</h1>
-            <p class="text-lg text-slate-600 mt-2">Hobbies, Self-directed Learning, and Past Work</p>
-        </header>
+        <h2 class="text-2xl font-bold text-slate-800 mb-4">Under Construction</h2>
+        <p class="text-slate-600 max-w-lg mx-auto mb-8 leading-relaxed">
+            This page will soon feature additional side projects and fun code experiments.
+        </p>
+        
+        <div class="mt-10">
+            <a href="projects.html" class="inline-flex items-center text-sm font-semibold text-blue-900 hover:text-blue-700 transition-colors">
+                View current projects
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </div>
 
-        <!-- Section 1: Solo Projects and Hobbies -->
-        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Solo Development Projects and Hobbies</h2>
-            
-            <p class="text-gray-700 leading-relaxed mb-6">
-                These activities demonstrate the application of my technical knowledge in a non-academic, community-driven context.
-            </p>
-
-            <div class="space-y-6">
-                <!-- Activity 1: ROMdle Helper -->
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">ROMdle Helper | <span class="text-slate-600 font-normal">Python and Data Handling</span></h3>
-                    <p class="text-gray-600 mt-1">
-                        To support the <em>Ragnarok Mobile</em> gaming community, I built a dedicated "Wordle-solver" web application using Python and Flask. 
-                        Recognizing that the game's daily puzzles rely on niche vocabulary, I created a database of game lore (monsters, items, and NPCs) and implemented search logic that helps users narrow down the correct word based on their current guesses and constraints.
-                    </p>
-                </div>
-                
-                <!-- Activity 2: Patched WiFi Linux Driver -->
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold text-gray-900">Linux Kernel Driver Patch (RTL8852AU) | <span class="text-slate-600 font-normal">System Administration and Open Source</span></h3>
-                    <p class="text-gray-600 mt-1 mb-2">
-                        I engineered a patch for the Realtek RTL8852AU Wi-Fi driver to resolve compatibility issues with Ubuntu 24.04 LTS and the newer Linux Kernel 6.11. 
-                        The project involved updating the driver's C codebase to align with modern kernel APIs. 
-                        This contribution successfully restored Wi-Fi 6 connectivity for devices like the <em>TP-Link AX1800</em> on more recent Linux distribution versions.
-                    </p>
-                    <a href="https://github.com/josejuico/rtl8852au-6.11-patched" target="_blank" class="text-blue-900 hover:text-blue-800 underline">GitHub Repository Link</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: Self-study -->
-        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Self-study and Skills Practice</h2>
-            
-            <p class="text-gray-700 leading-relaxed mb-6">
-                To stay ahead of industry trends, I dedicate time to self-directed study and online courses. 
-                This habit allows me to adopt new programming languages and tools that are not covered in my program's curriculum.
-            </p>
-
-            <div class="space-y-6">
-                <!-- Activity 1: Harvard's CS50 -->
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">Harvard University CS50 | <span class="text-slate-600 font-normal">Introduction to Programming with Python</span></h3>
-                    <p class="text-gray-600 mt-1">
-                        I studied Python programming fundamentails under this online self-paced course. 
-                        This was the first online Python course I completed and it intensified my curiousity for Python and programming in general.
-                    </p>
-                </div>
-
-                <!-- Activity 2: W3Schools Python Courses -->
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">Python Programming Proficiency | <span class="text-slate-600 font-normal">W3Schools Coursework</span></h3>
-                    <p class="text-gray-600 mt-1">
-                        I completed the core Python curriculum on W3Schools to establish a fundamental understanding of the language. 
-                        This training focused on mastering data structures, file handling, backend logic implementation, and object-oriented programming (OOP) principles.
-                    </p>
-                </div>
-                
-                <!-- Activity 3: Google AI Boost Bites -->
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">Generative AI Concepts and Application | <span class="text-slate-600 font-normal">Google AI Boost Bites</span></h3>
-                    <p class="text-gray-600 mt-1">
-                        I engaged in the Google AI Boost Bites learning program to quickly acquire practical knowledge in contemporary AI technology. 
-                        The training covered key areas such as the application of generative AI models, effective prompt engineering techniques, and the ethical considerations necessary for responsibly integrating AI into modern software development workflows.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-    </main>
+</main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-12">
