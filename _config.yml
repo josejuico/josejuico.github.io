@@ -1,0 +1,12 @@
+title: Jose Juico | Digital Portfolio
+name: Jose Juico
+nickname: Brad
+description: Digital Portfolio and Developer Playground
+email: josejuico@gmail.com
+github_username: josejuico
+
+# Build settings
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
