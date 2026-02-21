@@ -3,6 +3,8 @@ name: Jose Juico
 nickname: Brad
 description: Digital Portfolio and Developer Playground
 email: josejuico@gmail.com
+copyright: &copy; 2026 Jose Juico
+linkedin_username: josejuico
 github_username: josejuico
 
 # Build settings

@@ -4,17 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.name }}</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; 
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 20px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate-fadeInUp {
+            opacity: 0;
+            animation: fadeInUp 0.7s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        
+        @media print {
+            nav, footer, .download-cta {
+                display: none !important;
+            }
+            main {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+            }
+            .resume-section {
+                padding: 0.5rem 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased bg-slate-50">
+<body class="min-h-screen flex flex-col antialiased">
 
     {% include navbar.html %}
 
-    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
         {{ content }}
     </main>
 
     {% include footer.html %}
 
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>

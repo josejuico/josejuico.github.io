@@ -1,147 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Playground | Jose Juico</title>
-    <!-- Load Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; 
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translate3d(0, 20px, 0);
-            }
-            to {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-        .animate-fadeInUp {
-            opacity: 0;
-            animation: fadeInUp 0.7s ease-out forwards;
-            animation-delay: 0.2s;
-        }
-    </style>
-</head>
-<body class="min-h-screen flex flex-col antialiased">
+---
+layout: default
+title: Developer Playground
+---
 
-    <!-- Navigation Bar -->
-    <nav id="navbar" class="bg-white shadow-md sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-extrabold text-slate-700 tracking-tight">
-                        Jose Juico
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation Links -->
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
-                    <a href="index.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Home</a>
-                    <a href="resume.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Resume</a>
-                    <a href="projects.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Projects</a>
-                    <a href="playground.html" class="text-gray-900 border-b-2 border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Developer Playground</a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-900" aria-controls="mobile-menu" aria-expanded="false">
-                        <!-- Menu closed icon (bars) -->
-                        <svg class="block h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <!-- Menu open icon (x) -->
-                        <svg class="hidden h-6 w-6" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
+<header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
+    <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">{{ page.title }}</h1>
+    <p class="text-lg text-slate-600 mt-2">Side Projects and Software Experiments</p>
+</header>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <a href="{{ '/playground/flexbox.html' | relative_url }}" class="group bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md hover:border-blue-300 transition-all">
+        <div class="flex items-center mb-3">
+            <div class="p-2 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </div>
+            <h2 class="ml-3 text-xl font-bold text-slate-800">Flexbox Visualizer</h2>
         </div>
-
-        <!-- Mobile Menu -->
-        <div class="sm:hidden" id="mobile-menu" style="display: none;">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="resume.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Resume</a>
-                <a href="projects.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                <a href="playground.html" class="bg-slate-50 border-l-4 border-blue-900 block px-3 py-2 rounded-md text-base font-medium text-slate-700">Developer Playground</a>
-            </div>
+        <p class="text-slate-600 text-sm leading-relaxed">
+            An interactive tool to help visualize CSS Flexbox. 
+            Select properties like justify-content in real-time to see how they affect layout.
+        </p>
+        <div class="mt-4 text-blue-900 text-xs font-bold uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-flex items-center">
+            Launch <span class="ml-1">→</span>
         </div>
-    </nav>
+    </a>
 
-    <!-- Main Content -->
-    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
-        
-        <header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
-            <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Developer Playground</h1>
-            <p class="text-lg text-slate-600 mt-2">Side Projects and Software Experiments</p>
-        </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="playground/flexbox.html" class="group bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md hover:border-blue-300 transition-all">
-                <div class="flex items-center mb-3">
-                    <div class="p-2 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </div>
-                    <h2 class="ml-3 text-xl font-bold text-slate-800">Flexbox Visualizer</h2>
-                </div>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    An interactive tool to help visualize CSS Flexbox. 
-                    Select properties like justify-content and align-items in real-time to see how they affect layout.
-                </p>
-                <div class="mt-4 text-blue-900 text-xs font-bold uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-flex items-center">
-                    Launch <span class="ml-1">→</span>
-                </div>
-            </a>
-
-            <div class="bg-slate-50 p-6 rounded-xl border border-dashed border-slate-300 flex items-center justify-center">
-                <p class="text-slate-400 italic text-sm text-center">More experiments coming soon...</p>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-sm">
-            &copy; 2026 Jose Juico
-        </div>
-    </footer>
-
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.getElementById('mobile-menu-button');
-            const menu = document.getElementById('mobile-menu');
-            const iconOpen = document.getElementById('menu-icon-open');
-            const iconClose = document.getElementById('menu-icon-close');
-
-            if (button && menu) {
-                button.addEventListener('click', () => {
-                    const isExpanded = menu.style.display === 'block';
-                    
-                    if (isExpanded) {
-                        menu.style.display = 'none';
-                        iconOpen.classList.remove('hidden');
-                        iconClose.classList.add('hidden');
-                        button.setAttribute('aria-expanded', 'false');
-                    } else {
-                        menu.style.display = 'block';
-                        iconOpen.classList.add('hidden');
-                        iconClose.classList.remove('hidden');
-                        button.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+    <div class="bg-slate-50 p-6 rounded-xl border border-dashed border-slate-300 flex items-center justify-center">
+        <p class="text-slate-400 italic text-sm text-center">More experiments coming soon...</p>
+    </div>
+</div>

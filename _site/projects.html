@@ -1,10 +1,128 @@
----
-layout: default
-title: Featured Projects
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Projects | Jose Juico</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; 
+        }
 
-<header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
-    <h1 class="text-4xl font-extrabold text-slate-700 tracking-tight">{{ page.title }}</h1>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 20px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate-fadeInUp {
+            opacity: 0;
+            animation: fadeInUp 0.7s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        
+        @media print {
+            nav, footer, .download-cta {
+                display: none !important;
+            }
+            main {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+            }
+            .resume-section {
+                padding: 0.5rem 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <nav id="navbar" class="bg-white shadow-md sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="/" class="text-2xl font-extrabold text-slate-700 tracking-tight">
+                    Jose Juico
+                </a>
+            </div>
+            
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
+                <a href="/index.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Home</a>
+                <a href="/resume.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Resume</a>
+                <a href="/projects.html" class="text-gray-900 border-b-2 border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Projects</a>
+                <a href="/playground.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Developer Playground</a>
+            </div>
+            
+            <div class="-mr-2 flex items-center sm:hidden">
+                <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-900" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="block h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden sm:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/index.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/resume.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Resume</a>
+            <a href="/projects.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="/playground.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Developer Playground</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        if (button && menu) {
+            button.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                
+                if (!isHidden) {
+                    // Close mobile menu
+                    menu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                    button.setAttribute('aria-expanded', 'false');
+                } else {
+                    // Open mobile menu
+                    menu.classList.remove('hidden');
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        }
+    });
+</script>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
+        <header class="text-center pb-4 mb-8 border-b-2 border-slate-300">
+    <h1 class="text-4xl font-extrabold text-slate-700 tracking-tight">Featured Projects</h1>
     <p class="text-lg text-gray-600 mt-2">Software and Engineering Solutions</p>
 </header>
 
@@ -17,20 +135,20 @@ title: Featured Projects
             <div class="w-full h-80 min-h-[300px] bg-slate-100 border border-slate-300 rounded-lg relative overflow-hidden group">
                 <div class="carousel-container" data-carousel="p1">
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-100 z-10 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/metrometrics_homepage.png' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/metrometrics_homepage.png' | relative_url }}" alt="Homepage Interface" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/metrometrics_homepage.png" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/metrometrics_homepage.png" alt="Homepage Interface" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">Homepage Interface</p>
                     </div>
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-0 z-0 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/metrometrics_basic_dashboard.png' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/metrometrics_basic_dashboard.png' | relative_url }}" alt="Basic Dashboard" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/metrometrics_basic_dashboard.png" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/metrometrics_basic_dashboard.png" alt="Basic Dashboard" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">Basic Dashboard</p>
                     </div>
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-0 z-0 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/metrometrics_advanced_dashboard.png' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/metrometrics_advanced_dashboard.png' | relative_url }}" alt="Advanced Dashboard" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/metrometrics_advanced_dashboard.png" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/metrometrics_advanced_dashboard.png" alt="Advanced Dashboard" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">Advanced Dashboard</p>
                     </div>
@@ -69,8 +187,8 @@ title: Featured Projects
     
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="lg:col-span-1">
-            <a href="{{ '/assets/images/romdlehelper.png' | relative_url }}" target="_blank" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                <img src="{{ '/assets/images/romdlehelper.png' | relative_url }}" alt="ROMdlehelper in Action" class="w-full h-auto">
+            <a href="/assets/images/romdlehelper.png" target="_blank" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                <img src="/assets/images/romdlehelper.png" alt="ROMdlehelper in Action" class="w-full h-auto">
             </a>
         </div>
         <div class="lg:col-span-2 space-y-4">
@@ -98,20 +216,20 @@ title: Featured Projects
             <div class="w-full h-80 min-h-[300px] bg-slate-100 border border-slate-300 rounded-lg relative overflow-hidden group">
                 <div class="carousel-container" data-carousel="p3">
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-100 z-10 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/smart_tc_front.jpg' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/smart_tc_front.jpg' | relative_url }}" alt="Trash Can in Operation" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/smart_tc_front.jpg" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/smart_tc_front.jpg" alt="Trash Can in Operation" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">Trash Can in Operation</p>
                     </div>
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-0 z-0 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/smart_tc_concept.png' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/smart_tc_concept.png' | relative_url }}" alt="3D Concept Model" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/smart_tc_concept.png" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/smart_tc_concept.png" alt="3D Concept Model" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">3D Concept Model</p>
                     </div>
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-0 z-0 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/smart_tc_schem.png' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/smart_tc_schem.png' | relative_url }}" alt="Circuit Schematic Diagram" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/smart_tc_schem.png" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/smart_tc_schem.png" alt="Circuit Schematic Diagram" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">Circuit Schematic Diagram</p>
                     </div>
@@ -139,7 +257,7 @@ title: Featured Projects
                 <li><strong>Microcontroller</strong>: Arduino Uno R3</li>
                 <li><strong>Sensors and Actuators</strong>: HC-SR04 and HY-SRF05 (Ultrasonic), SG90 Servo Motor</li>
                 <li><strong>Software</strong>: C++ (Arduino IDE), NewPing Library, LiquidCrystal_I2C Library</li>
-                <li><a href="{{ '/assets/docs/embesys_final_project.pdf' | relative_url }}" target="_blank" class="text-blue-900 hover:text-blue-800 underline">Read Project Paper (PDF)</a></li>
+                <li><a href="/assets/docs/embesys_final_project.pdf" target="_blank" class="text-blue-900 hover:text-blue-800 underline">Read Project Paper (PDF)</a></li>
             </ul>
         </div>
     </div>
@@ -149,20 +267,20 @@ title: Featured Projects
             <div class="w-full h-80 min-h-[300px] bg-slate-100 border border-slate-300 rounded-lg relative overflow-hidden group">
                 <div class="carousel-container" data-carousel="p4">
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-100 z-10 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/smart_fan_front.jpg' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/smart_fan_front.jpg' | relative_url }}" alt="Smart Fan Prototype" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/smart_fan_front.jpg" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/smart_fan_front.jpg" alt="Smart Fan Prototype" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">Smart Fan Prototype</p>
                     </div>
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-0 z-0 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/smart_fan_diagram.png' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/smart_fan_diagram.png' | relative_url }}" alt="3D Concept Model" class="object-contain w-full h-full rounded-md">
+                        <a href="/assets/images/smart_fan_diagram.png" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/smart_fan_diagram.png" alt="3D Concept Model" class="object-contain w-full h-full rounded-md">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">3D Concept Model</p>
                     </div>
                     <div class="carousel-slide absolute inset-2 transition-opacity duration-500 opacity-0 z-0 flex flex-col justify-center">
-                        <a href="{{ '/assets/images/smart_fan_schem.png' | relative_url }}" target="_blank" class="block w-full h-full">
-                            <img src="{{ '/assets/images/smart_fan_schem.png' | relative_url }}" alt="Circuit Schematic Diagram" class="object-contain w-full h-full rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/64748b?text=System+Diagram';">
+                        <a href="/assets/images/smart_fan_schem.png" target="_blank" class="block w-full h-full">
+                            <img src="/assets/images/smart_fan_schem.png" alt="Circuit Schematic Diagram" class="object-contain w-full h-full rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/64748b?text=System+Diagram';">
                         </a>
                         <p class="text-xs text-center text-gray-500 mt-1">Circuit Schematic Diagram</p>
                     </div>
@@ -190,8 +308,36 @@ title: Featured Projects
                 <li><strong>Microcontroller</strong>: ESP32 (Wi-Fi enabled)</li>
                 <li><strong>Cloud and Connectivity</strong>: Firebase Realtime Database (RTDB), Wi-Fi</li>
                 <li><strong>Hardware</strong>: PIR Sensor (HC-SR501), Ultrasonic Sensor (HC-SR04), 5V Relay</li>
-                <li><a href="{{ '/assets/docs/iotdevt_final_project.pdf' | relative_url }}" target="_blank" class="text-blue-900 hover:text-blue-800 underline">Read Project Paper (PDF)</a></li>
+                <li><a href="/assets/docs/iotdevt_final_project.pdf" target="_blank" class="text-blue-900 hover:text-blue-800 underline">Read Project Paper (PDF)</a></li>
             </ul>
         </div>
     </div>
 </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-auto">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+            
+            <div>
+                <!-- <p class="text-sm tracking-tight">
+                    Digital Portfolio and Developer Playground
+                </p> -->
+                <p class="text-slate-400 text-sm mt-1">
+                    &copy; 2026 Jose Juico
+                </p>
+            </div>
+
+            <div class="flex justify-center md:justify-end space-x-6 text-sm">
+                <a href="mailto:josejuico@gmail.com" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="https://linkedin.com/in/josejuico" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+                <a href="https://github.com/josejuico" class="hover:text-blue-400 transition-colors">GitHub</a>     
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

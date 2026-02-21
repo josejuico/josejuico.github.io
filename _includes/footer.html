@@ -3,21 +3,20 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
             
             <div>
-                <p class="text-lg font-bold tracking-tight">{{ site.name }}</p>
-                <p class="text-slate-400 text-sm mt-1 italic">
+                <!-- <p class="text-sm tracking-tight">
                     {{ site.description }}
+                </p> -->
+                <p class="text-slate-400 text-sm mt-1">
+                    &copy; {{ "now" | date: "%Y" }} {{ site.name }}
                 </p>
             </div>
 
             <div class="flex justify-center md:justify-end space-x-6 text-sm">
                 <a href="mailto:{{ site.email }}" class="hover:text-blue-400 transition-colors">Contact</a>
-                <a href="https://github.com/{{ site.github_username }}" class="hover:text-blue-400 transition-colors">GitHub</a>
-                <a href="/resume.html" class="hover:text-blue-400 transition-colors">Resume</a>
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+                <a href="https://github.com/{{ site.github_username }}" class="hover:text-blue-400 transition-colors">GitHub</a>     
             </div>
 
         </div>
-
-        <div class="border-t border-slate-700 mt-6 pt-6 text-center text-[10px] sm:text-xs text-slate-500">
-            &copy; {{ "now" | date: "%Y" }} {{ site.name }}
     </div>
 </footer>

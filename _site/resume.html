@@ -1,24 +1,142 @@
----
-layout: default
-title: Resume
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Jose Juico</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
-<header class="text-center pb-4 mb-4 border-b-2 border-slate-300">
-    <h1 class="text-4xl font-extrabold text-slate-700 tracking-tight">{{ site.name }}</h1>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; 
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 20px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate-fadeInUp {
+            opacity: 0;
+            animation: fadeInUp 0.7s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        
+        @media print {
+            nav, footer, .download-cta {
+                display: none !important;
+            }
+            main {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+            }
+            .resume-section {
+                padding: 0.5rem 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <nav id="navbar" class="bg-white shadow-md sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="/" class="text-2xl font-extrabold text-slate-700 tracking-tight">
+                    Jose Juico
+                </a>
+            </div>
+            
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-4 items-center">
+                <a href="/index.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Home</a>
+                <a href="/resume.html" class="text-gray-900 border-b-2 border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Resume</a>
+                <a href="/projects.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Projects</a>
+                <a href="/playground.html" class="text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-blue-900 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out">Developer Playground</a>
+            </div>
+            
+            <div class="-mr-2 flex items-center sm:hidden">
+                <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-900" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="block h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden sm:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/index.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/resume.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Resume</a>
+            <a href="/projects.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="/playground.html" class="text-gray-700 hover:bg-gray-50 hover:border-l-4 hover:border-blue-900 block px-3 py-2 rounded-md text-base font-medium">Developer Playground</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        if (button && menu) {
+            button.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                
+                if (!isHidden) {
+                    // Close mobile menu
+                    menu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                    button.setAttribute('aria-expanded', 'false');
+                } else {
+                    // Open mobile menu
+                    menu.classList.remove('hidden');
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        }
+    });
+</script>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 animate-fadeInUp">
+        <header class="text-center pb-4 mb-4 border-b-2 border-slate-300">
+    <h1 class="text-4xl font-extrabold text-slate-700 tracking-tight">Jose Juico</h1>
     <p class="text-lg text-gray-600 mt-1">Software Engineer and Systems Analyst</p>
 </header>
 
 <div class="flex justify-center pb-2 mb-2 flex-wrap gap-x-4 text-sm text-gray-500 mt-2">
-    <a href="mailto:{{ site.email }}" class="hover:text-slate-600">{{ site.email }}</a>
+    <a href="mailto:josejuico@gmail.com" class="hover:text-slate-600">josejuico@gmail.com</a>
     <span class="mx-1">•</span>
-    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="hover:text-slate-600">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/josejuico" target="_blank" class="hover:text-slate-600">LinkedIn</a>
     <span class="mx-1">•</span>
-    <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-slate-600">GitHub</a>
+    <a href="https://github.com/josejuico" target="_blank" class="hover:text-slate-600">GitHub</a>
 </div>
 
 <!-- Download and Print -->
 <div class="download-cta text-center mb-8 space-x-4">
-    <a href="{{ '/assets/docs/josejuico_resume.pdf' | relative_url }}" download class="inline-flex items-center px-4 py-2 border border-blue-800 text-sm font-medium rounded-md shadow-sm text-blue-800 bg-white hover:bg-gray-100 transition duration-150 ease-in-out">
+    <a href="/assets/docs/josejuico_resume.pdf" download class="inline-flex items-center px-4 py-2 border border-blue-800 text-sm font-medium rounded-md shadow-sm text-blue-800 bg-white hover:bg-gray-100 transition duration-150 ease-in-out">
         <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
         Download PDF
     </a>
@@ -194,3 +312,31 @@ title: Resume
         </div>
     </div>
 </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-auto">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+            
+            <div>
+                <!-- <p class="text-sm tracking-tight">
+                    Digital Portfolio and Developer Playground
+                </p> -->
+                <p class="text-slate-400 text-sm mt-1">
+                    &copy; 2026 Jose Juico
+                </p>
+            </div>
+
+            <div class="flex justify-center md:justify-end space-x-6 text-sm">
+                <a href="mailto:josejuico@gmail.com" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="https://linkedin.com/in/josejuico" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+                <a href="https://github.com/josejuico" class="hover:text-blue-400 transition-colors">GitHub</a>     
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
