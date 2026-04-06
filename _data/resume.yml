@@ -10,12 +10,10 @@ contact:
 
 summaries:
   personal_intro: >
-    I am a Full-Stack Software Engineer specializing in scalable backend systems and secure RESTful APIs. 
-    With a technical foundation in Python and Django, I have gained valuable experience in enterprise engineering environments and Agile sprints, focusing on the delivery of clean, maintainable code. 
-    I am proficient in MySQL database management, Docker containerization, and version control using Git across both Linux and Windows CLI environments. 
-    As an Information Systems graduate, I bring a solutions-oriented mindset developed through technical business operations and a strong commitment to maintaining high-quality technical documentation. 
+    I am a Full-Stack Software Engineer and Information Systems graduate focused on building scalable backends and secure APIs.
+    I have a strong foundation in Python/Django and enterprise-level Agile development, backed by proficiency in MySQL and Docker.
   current_focus: >
-    Currently, I am focused on upskilling in Java and Spring Boot to further expand my backend capabilities and engineering toolkit.
+    Currently, I am focused on upskilling in Java and Spring Boot.
   professional_profile: >
     Full-Stack Software Engineer specializing in scalable backend systems and secure RESTful APIs, currently upskilling in Java and Spring Boot.
     Technical foundation in Python/Django with experience in enterprise engineering environments, Agile sprints, and the delivery of clean, maintainable code.
