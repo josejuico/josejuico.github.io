@@ -1,0 +1,80 @@
+contact:
+  full_name: "Jose Aurelio N. Juico"
+  nickname: "Brad"
+  title: "Full-Stack Software Engineer"
+  email: "josejuico@gmail.com"
+  phone: "+639177731110"
+  linkedin: "linkedin.com/in/josejuico"
+  portfolio: "josejuico.github.io"
+  github: "github.com/josejuico"
+
+summary: >
+  Full-Stack Software Engineer specializing in scalable backend systems and secure RESTful APIs, currently upskilling in Java and Spring Boot. 
+  Technical foundation in Python/Django with experience in enterprise engineering environments, Agile sprints, and the delivery of clean, maintainable code.
+  Proficient in MySQL database management, Docker containerization, and version control using Git across Linux and Windows CLI environments.
+  Information Systems graduate with a solutions-oriented mindset developed through technical business operations and a commitment to maintaining high-quality technical documentation.
+
+technical_skills:
+  languages: ["Python", "JavaScript", "HTML", "CSS", "C#", "C++", "Java"]
+  frameworks_libraries: ["Django", "Flask", "Tailwind", "Bootstrap", "Spring Boot"]
+  databases_storage: ["MySQL", "Firebase", "Redis"]
+  tools_platforms: ["Git", "GitHub/GitLab", "Jira", "Confluence", "Docker", "Linux", "Grafana", "Google Looker Studio"]
+
+work_experience:
+  - company: "Globe Telecom, Inc."
+    location: "Taguig City"
+    role: "Software Engineer & System Analyst Intern"
+    dates: "2025 – 2026"
+    highlights:
+      - "Contributed to backend development and system analysis in Agile sprints, participating in Daily Stand-ups to synchronize sprint progress and technical documentation."
+      - "Developed an observability dashboard using Google Cloud Platform and Grafana to monitor performance and business metrics for AI-based systems."
+      - "Engaged in collaborative code reviews to ensure code quality, while performing functional testing and requirements analysis to maintain system reliability."
+      - "Assisted in system design documentation for an eSIM project, including requirements analysis and architecture diagrams."
+
+  - company: "Project PC"
+    location: "Pasig City"
+    role: "Owner, Operations Manager"
+    dates: "2018 – 2020"
+    highlights:
+      - "Managed a computer retail and CCTV installation business, handling custom hardware builds, hardware/network troubleshooting, and security installation while overseeing all client operations and technical support."
+
+  - company: "ABuild, Inc."
+    location: "Mandaluyong City"
+    role: "Project Coordinator (2014-2018); CAD Technician (2010-2014)"
+    dates: "2010 – 2018"
+    highlights:
+      - "Drafted technical layouts using AutoCAD and coordinated pre-construction client communications for commercial projects."
+      - "Supported project bidding, execution, and architectural and technical compliance oversight."
+
+projects:
+  - name: "MetroMetrics - Web-Based Transit Analytics Platform"
+    role: "Lead Developer"
+    award: "Best Capstone Project"
+    description: "Designed and developed a scalable transit analytics platform using Django, XGBoost, MySQL, and Redis."
+    highlights:
+      - "Architected secure RESTful APIs to deliver predictive crowding insights."
+      - "Implemented Celery with Redis as a message broker to manage asynchronous forecasting tasks and background job scheduling."
+      - "Optimized system responsiveness by offloading compute-intensive Machine Learning processes to worker queues."
+      - "Deployed the application using Docker-based containerization and integrated interactive data dashboards for analytics visualization."
+
+  - name: "ROMdle Helper - Flask Web App"
+    role: "Solo Project"
+    description: "Developed a word-based assistant tool using Python and Flask, implementing pattern-matching and search wildcard logic."
+    highlights:
+      - "Integrated Google Sheets API as a lightweight content management system to enable real-time, community-driven database updates."
+      - "Designed REST endpoints and structured backend logic to support scalable query handling and improve data retrieval efficiency."
+
+education:
+  - institution: "De La Salle-College of Saint Benilde"
+    degree: "Bachelor of Science in Information Systems"
+    dates: "2022 – 2026"
+  - institution: "University of the Philippines Diliman"
+    degree: "Computer Engineering Coursework"
+    dates: "2007 – 2009"
+
+awards:
+  - title: "Best Capstone Project Award"
+    project: "MetroMetrics (Transit Analytics Platform)"
+    institution: "De La Salle-College of Saint Benilde"
+  - title: "Consistent Dean's Lister Awardee"
+    description: "All Enrolled Terms, School of Management and Information Technology"
