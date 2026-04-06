@@ -50,9 +50,9 @@ projects:
   - name: "MetroMetrics - Web-Based Transit Analytics Platform"
     role: "Lead Developer"
     award: "Best Capstone Project"
-    description: "Designed and developed a scalable transit analytics platform using Django, XGBoost, MySQL, and Redis."
+    description: "Designed and developed a scalable transit analytics platform (desktop and mobile) using Django, XGBoost, MySQL, and Redis."
     highlights:
-      - "Architected secure RESTful APIs to deliver predictive crowding insights."
+      - "Developed secure RESTful APIs to deliver predictive crowding insights in JSON format."
       - "Implemented Celery with Redis as a message broker to manage asynchronous forecasting tasks and background job scheduling."
       - "Optimized system responsiveness by offloading compute-intensive Machine Learning processes to worker queues."
       - "Deployed the application using Docker-based containerization and integrated interactive data dashboards for analytics visualization."
