@@ -8,11 +8,19 @@ contact:
   portfolio: "josejuico.github.io"
   github: "github.com/josejuico"
 
-summary: >
-  Full-Stack Software Engineer specializing in scalable backend systems and secure RESTful APIs, currently upskilling in Java and Spring Boot. 
-  Technical foundation in Python/Django with experience in enterprise engineering environments, Agile sprints, and the delivery of clean, maintainable code.
-  Proficient in MySQL database management, Docker containerization, and version control using Git across Linux and Windows CLI environments.
-  Information Systems graduate with a solutions-oriented mindset developed through technical business operations and a commitment to maintaining high-quality technical documentation.
+summaries:
+  personal_intro: >
+    I am a Full-Stack Software Engineer specializing in scalable backend systems and secure RESTful APIs. 
+    With a technical foundation in Python and Django, I have gained valuable experience in enterprise engineering environments and Agile sprints, focusing on the delivery of clean, maintainable code. 
+    I am proficient in MySQL database management, Docker containerization, and version control using Git across both Linux and Windows CLI environments. 
+    As an Information Systems graduate, I bring a solutions-oriented mindset developed through technical business operations and a strong commitment to maintaining high-quality technical documentation. 
+  current_focus: >
+    Currently, I am focused on upskilling in Java and Spring Boot to further expand my backend capabilities and engineering toolkit.
+  professional_profile: >
+    Full-Stack Software Engineer specializing in scalable backend systems and secure RESTful APIs, currently upskilling in Java and Spring Boot.
+    Technical foundation in Python/Django with experience in enterprise engineering environments, Agile sprints, and the delivery of clean, maintainable code.
+    Proficient in MySQL database management, Docker containerization, and version control using Git across Linux and Windows CLI environments.
+    Information Systems graduate with a solutions-oriented mindset developed through technical business operations and a commitment to maintaining high-quality technical documentation.
 
 technical_skills:
   languages: ["Python", "JavaScript", "HTML", "CSS", "C#", "C++", "Java"]
